@@ -15,6 +15,7 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
     - **hooks/**: Custom React hooks.
     - **styles/**: CSS styles.
     - **App.jsx**: Main App component.
+     
 - **server/**: Contains the backend code.
   - **config/**: Configuration files.
   - **controllers/**: Request handlers for various routes.
