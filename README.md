@@ -3,7 +3,7 @@
 
 ## Overview
 
-Haulmatic is a full-stack web application designed to manage and streamline transportation logistics. It consists of a client-side built with React and a server-side built with Node.js and Express.
+Haulmatic is a full-stack web application designed to manage users. It consists of a client-side built with React and a server-side built with Node.js and Express.
 
 ## Directory Structure
 
@@ -13,10 +13,8 @@ Haulmatic is a full-stack web application designed to manage and streamline tran
     - **components/**: React components.
     - **context/**: Context API for state management.
     - **hooks/**: Custom React hooks.
-    - **pages/**: Different pages of the application.
     - **styles/**: CSS styles.
     - **App.jsx**: Main App component.
-    - **index.jsx**: Entry point for the React application.
 - **server/**: Contains the backend code.
   - **config/**: Configuration files.
   - **controllers/**: Request handlers for various routes.
@@ -32,7 +30,7 @@ Haulmatic is a full-stack web application designed to manage and streamline tran
 
 - Node.js (version 14 or above)
 - npm (version 6 or above)
-- MongoDB (for the database)
+- MySQL (for the database)
 
 ### Installation
 
