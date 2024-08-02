@@ -38,7 +38,7 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/geenathWeerasingha/ase-coding-project
-   cd Haulmatic
+   cd ase-coding-project
    ```
 
 2. **Install dependencies:**
