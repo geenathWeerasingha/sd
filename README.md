@@ -52,7 +52,61 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
      cd server
      npm install
      ```
+### Database Setup
 
+1. **Configure the database:**
+
+   Inside the \`server/config\` folder, there is a file named \`database.js\`. Update this file with your database configuration:
+   \`\`\`javascript
+   const mysql = require("mysql2");
+
+   const pool = mysql.createPool({
+     host: "localhost",
+     user: "root",
+     password: "",
+     database: "user_management_system",
+     waitForConnections: true,
+     connectionLimit: 10,
+     queueLimit: 0,
+   });
+
+   const db = pool.promise();
+
+   module.exports = db;
+   \`\`\`
+
+2. **Create the database:**
+
+   Create a database named \`user_management_system\` in MySQL. You can run the following SQL query:
+   \`\`\`sql
+   CREATE DATABASE user_management_system;
+   \`\`\`
+
+3. **Create the \`users\` table:**
+
+   Inside the \`user_management_system\` database, create the \`users\` table with the following SQL query:
+   \`\`\`sql
+   CREATE TABLE users (
+       id INT(11) NOT NULL AUTO_INCREMENT,
+       username VARCHAR(50) NOT NULL,
+       password VARCHAR(255) NOT NULL,
+       firstname VARCHAR(50) NOT NULL,
+       lastname VARCHAR(50) NOT NULL,
+       refreshToken TEXT DEFAULT NULL,
+       roles LONGTEXT DEFAULT '{"User": 2001}',
+       PRIMARY KEY (id)
+   );
+   \`\`\`
+
+4. **Insert an initial admin user:**
+
+   Insert an initial admin user with the following SQL query:
+   \`\`\`sql
+   INSERT INTO users (username, password, firstname, lastname, roles)
+   VALUES ('haulmatic', '$2a$10$YeDZVcxsuBeaCCi8ly2ep.fHHITmoWnVrgfYXlFU7acygBs94/UoK', 'Haul', 'Matic', '{"User": 2001, "Admin": 5150}');
+   \`\`\`
+
+ 
 ### Running the Application
 
 1. **Start the server:**
