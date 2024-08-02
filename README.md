@@ -36,7 +36,7 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/geenathWeerasingha/ase-coding-project
    cd Haulmatic
    ```
 
@@ -52,14 +52,6 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
      npm install
      ```
 
-3. **Set up environment variables:**
-   Create a `.env` file in the `server` directory and add the necessary environment variables. For example:
-   ```env
-   PORT=5000
-   MONGO_URI=<your_mongodb_connection_string>
-   JWT_SECRET=<your_jwt_secret>
-   ```
-
 ### Running the Application
 
 1. **Start the server:**
@@ -71,16 +63,16 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
 2. **Start the client:**
    ```bash
    cd client
-   npm start
+   npm run dev
    ```
 
-The client application will be available at `http://localhost:3000` and the server at `http://localhost:5000`.
+The client application will be available at `http://localhost:5173` and the server at `http://localhost:3500`.
 
 ## Features
 
-- **User Authentication:** Register, login, and manage user sessions.
+- **User Authentication:** login, and manage user sessions.
 - **Role-Based Access Control:** Different access levels for different user roles.
-- **Data Management:** CRUD operations for managing transportation data.
+- **Data Management:** CRUD operations for managing user data.
 - **Logging:** Request and error logging for better debugging and monitoring.
 
 ## Technologies Used
@@ -92,16 +84,8 @@ The client application will be available at `http://localhost:3000` and the serv
 - **Backend:**
   - Node.js
   - Express
-  - MongoDB
+  - MySql
   - JWT for authentication
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new feature branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
 
 ## License
 
