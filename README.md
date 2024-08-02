@@ -58,20 +58,20 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
 
    Inside the \`server/config\` folder, there is a file named \`database.js\`. Update this file with your database configuration:
    \`\`\`javascript
-   const mysql = require("mysql2");
-
+   const mysql = require(\"mysql2\");
+   
    const pool = mysql.createPool({
-     host: "localhost",
-     user: "root",
-     password: "",
-     database: "user_management_system",
+     host: \"localhost\",
+     user: \"root\",
+     password: \"\",
+     database: \"user_management_system\",
      waitForConnections: true,
      connectionLimit: 10,
      queueLimit: 0,
    });
-
+   
    const db = pool.promise();
-
+   
    module.exports = db;
    \`\`\`
 
@@ -93,7 +93,7 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
        firstname VARCHAR(50) NOT NULL,
        lastname VARCHAR(50) NOT NULL,
        refreshToken TEXT DEFAULT NULL,
-       roles LONGTEXT DEFAULT '{"User": 2001}',
+       roles LONGTEXT DEFAULT '{\"User\": 2001}',
        PRIMARY KEY (id)
    );
    \`\`\`
@@ -103,7 +103,7 @@ Haulmatic is a full-stack web application designed to manage users. It consists 
    Insert an initial admin user with the following SQL query:
    \`\`\`sql
    INSERT INTO users (username, password, firstname, lastname, roles)
-   VALUES ('haulmatic', '$2a$10$YeDZVcxsuBeaCCi8ly2ep.fHHITmoWnVrgfYXlFU7acygBs94/UoK', 'Haul', 'Matic', '{"User": 2001, "Admin": 5150}');
+   VALUES ('haulmatic', '$2a$10$YeDZVcxsuBeaCCi8ly2ep.fHHITmoWnVrgfYXlFU7acygBs94/UoK', 'Haul', 'Matic', '{\"User\": 2001, \"Admin\": 5150}');
    \`\`\`
 
  
